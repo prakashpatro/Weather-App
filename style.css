@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 125, 0.7), rgba(125, 125, 0, 0.25)), url("background.jpg");
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    background: rgba(0, 0, 0, 0.6);
+    color: #919fb3;
+    width: 50vw;
+    margin: 20px auto;
+    padding: 2em;
+    border-radius: 20px;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    width: 85%;
+    height: 62px;
+    margin: 5px auto;
+    transition: 1s all ease;
+}
+
+.search_city {
+    margin: 0.2em 0.5em;
+    padding: 0 12px;
+    width: 85%;
+    height: 74%;
+    border: none;
+    outline: none;
+    border-radius: 18px;
+    background-color: #20202b;
+    color: #6b6b6b;
+    font-size: 110%;
+}
+
+.search_city:focus {
+    background-color: #324242;
+    opacity: 0.7;
+}
+
+.search_icon {
+    margin: 0.3em;
+    border: none;
+    border-radius: 50%;
+    background-color: #20202b;
+    color: white;
+    height: 42px;
+    width: 42px;
+}
+
+.search_icon:hover {
+    background-color: #585757;
+    cursor: pointer;
+}
+
+.weather {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height: 100%;
+    margin: 2px 0 8px 22px;
+    padding: 0 0 0 10%;
+}
+
+.descript {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    font-style: monospace;
+    text-transform: capitalize;
+}
+
+.info {
+    font-size: 18px;
+    margin: 0px 0 0;
+}
+
+.pic {
+    width: 40%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.outer {
+    display: flex;
+}
+
+.outer.load {
+    visibility: hidden;
+    position: relative;
+}
+
+.outer.load::after {
+    visibility: visible;
+    content: "Loading...";
+    color: #585757;
+    font-size: 26px;
+    position: absolute;
+    top: 25%;
+    left: 40%;
+}
+
+@media only screen and (max-width: 680px) {
+    body {
+        background-repeat: no-repeat;
+        width: 100vw;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: 80vh;
+        width: 85vw;
+        margin: 25px auto;
+        padding: 1%;
+        border-radius: 25px;
+    }
+    .pic {
+        display: none;
+    }
+    .search {
+        margin: 30px 0 0 0;
+        width: 100%;
+    }
+    .search_city {
+        width: 90%;
+        margin: 6px 0 8px 8px;
+    }
+    .search_icon {
+        width: 10%;
+        margin: 6px 5px 5px 6px;
+        border-radius: 18px;
+        height: 74%;
+    }
+    .outer {
+        margin-top: 20px;
+    }
+    .weather {
+        margin: 2vw;
+        width: 100%;
+    }
+    .descript {
+        margin: 0;
+        width: 100%;
+    }
+}

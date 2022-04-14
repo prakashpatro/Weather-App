@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Weather App</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="search">
+            <input type="text" class="search_city" placeholder="Search">
+            <button class="search_icon" onclick="func()"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" height="2em" width="1.8em" xmlns="http://www.w3.org/2000/svg"><path d="M10,18c1.846,0,3.543-0.635,4.897-1.688l4.396,4.396l1.414-1.414l-4.396-4.396C17.365,13.543,18,11.846,18,10 c0-4.411-3.589-8-8-8s-8,3.589-8,8S5.589,18,10,18z M10,4c3.309,0,6,2.691,6,6s-2.691,6-6,6s-6-2.691-6-6S6.691,4,10,4z"></path></svg></button>
+        </div>
+        <div class="outer load">
+            <div class="weather">
+                <h1 class="city"></h1>
+                <div class="temperature">
+                    <h1 class="temp"><span class="cel"></span> °C</h1>
+                </div>
+                <div class="descript"><img src="https://openweathermap.org/img/wn/10d.png" alt="" class="icon"><span class="description"></span><br></div>
+                <div class="info">Humidity : <span class="humid"></span><br>Wind Speed : <span class="wind"></span></div>
+            </div>
+            <div class="pic"><img src="https://openweathermap.org/img/wn/10d@4x.png" alt="" class="icon1"></div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
